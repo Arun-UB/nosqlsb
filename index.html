@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">NoSQL Benchmarking</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+             <!--  <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li> -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <form>
+      <fieldset>
+        <legend>YCSB client Options</legend>
+
+        <span class="help-block"><strong>DB packages</strong></span>
+         <label class="checkbox inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> MongoDB
+        </label>
+        <label class="checkbox inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> Cassandra
+        </label>
+        <label class="checkbox inline">
+          <input type="checkbox" id="inlineCheckbox3" value="option3"> Voldemort
+        </label>
+  
+   <br><br>
+    <span class="help-block"><strong>Workloads</strong></span>
+
+       <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+         Workload A: Update heavy workload
+         <p class="muted">
+          This workload has a mix of 50/50 reads and writes. An application example is a session store recording recent actions.
+         </p>
+       </label>
+       <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+         Workload B: Read mostly workload
+          <p class="muted">
+          This workload has a 95/5 reads/write mix. Application example: photo tagging; add a tag is an update, but most operations are to read tags.
+         </p>
+       </label>
+         <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option3">
+         Workload C: Read only
+          <p class="muted">
+          This workload is 100% read. Application example: user profile cache, where profiles are constructed elsewhere (e.g., Hadoop).
+         </p>
+       </label>
+         <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option4">
+         Workload D: Read latest workload
+          <p class="muted">
+          In this workload, new records are inserted, and the most recently inserted records are the most popular. Application example: user status updates; people want to read the latest.
+         </p>
+       </label>
+         <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option5">
+         Workload E: Short ranges
+         <p class="muted">
+In this workload, short ranges of records are queried, instead of individual records. Application example: threaded conversations, where each scan is for the posts in a given thread (assumed to be clustered by thread id).</p>
+       </label>
+         <label class="radio">
+         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option6">
+         Workload F: Read-modify-write
+          <p class="muted">
+         In this workload, the client will read a record, modify it, and write back the changes. Application example: user database, where user records are read and modified by the user or to record user activity.
+         </p>
+       </label>
+        </fieldset>
+      </form>
+          
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+<!--    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+-->
+  </body>
+</html>
