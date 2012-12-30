@@ -14,8 +14,8 @@ def host_type():
 
 
 def ycsb(workload):
-  # cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount=1000 -P workloads/'+ workload + '> test.448.res'
-  # cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://10.152.163.208:27017 -p mongodb.database=ycsb -p mongodb.writeConcern=normal >mongo.1054.res'
-  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load cassandra-10 -P workloads/'+ workload + ' -p recordcount=10000 -threads 10 -s > filepath'
+  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount=1000 -P workloads/'+ workload + '> test.448.res'
+  cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://10.152.163.208:27017 -p mongodb.database=ycsb -p mongodb.writeConcern=normal >mongo.1054.res'
+  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load cassandra-10 -P workloads/'+ workload + ' -p recordcount=10000  -p hosts=10.152.150.205 -threads 10 -s > filepath'
 # bin/ycsb run cassandra-10 -P workloads/workloada -p recordcount=10000 -p operationcount=10000 -threads 10 -s > filepath
   local(cmd)
