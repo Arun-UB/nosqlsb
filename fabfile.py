@@ -14,7 +14,6 @@ def host_type():
 
 
 def ycsb(workload):
-	cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount=1000 -P workloads/'+ workload + '> test.448.res'
+  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount=1000 -P workloads/'+ workload + '> test.448.res'
   #cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && /bin/ycsb run mongodb -s -P workloads/'+ workload + '-p mongodb.url=mongodb://10.152.163.208:27017 -p mongodb.database=ycsb -p mongodb.writeConcern=normal >mongo.1054.res'
-
   local(cmd)
