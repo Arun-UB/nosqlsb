@@ -2,7 +2,7 @@ from fabric.api import *
 from time import strftime
 
 
-def ycsb(voldemort,mongo,workload,recordcount):
+def ycsb(voldemort,workload,recordcount):
   voldemort_ip='10.72.189.226'
   mongo_ip=' 10.101.65.56'
   #stime=strftime("%H%M%S")[1:4]

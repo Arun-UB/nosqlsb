@@ -23,8 +23,8 @@ def ycsb():
     if request.method == 'POST':
     	#msg=sh.fab("-H","ubuntu@ec2-174-129-80-204.compute-1.amazonaws.com`","-i","/home/arun/nosqlsb.pem","host_type");
 
-        sh.fab("ycsb:workload="+request.form['workload']+',recordcount='+request.form['recordcount']+',voldemort='+request.form['voldemort']+',mongo='+request.form['mongo'])
-	flash('Done'+request.form['mongo'])
+        sh.fab("ycsb:workload="+request.form['workload']+',recordcount='+request.form['recordcount']+',voldemort='+request.form['voldemort'])
+	flash('Done'+request.form['voldemort'])
 	return render_template('index.html')
 
     else:
@@ -35,4 +35,4 @@ def ycsb():
 if __name__ == '__main__':
 	app.debug=True
 	app.secret_key="i want this sem to get over"	
-	app.run(port=80,host='0.0.0.0')
+	app.run(port=5000,host='0.0.0.0')
