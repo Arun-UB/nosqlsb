@@ -121,10 +121,13 @@ In this workload, short ranges of records are queried, instead of individual rec
          In this workload, the client will read a record, modify it, and write back the changes. Application example: user database, where user records are read and modified by the user or to record user activity.
          </p>
        </label>
-<span class="help-block"><strong>Record Count</strong></span>
+        <span class="help-block"><strong>Record Count</strong></span>
         <input name="recordcount" type="range" value="1000" min="1000" max="100000" step="1000" />
         <output name="rOut">1000</output>
      
+         <span class="help-block"><strong>Target(Throughput) </strong></span>
+        <input name="target" type="range" value="1000" min="1000" max="100000" step="1000" />
+        <output name="rOut">1000 ops/sec</output>
         </fieldset>
         
         <div class="form-actions">
@@ -158,3 +161,4 @@ In this workload, short ranges of records are queried, instead of individual rec
 -->
   </body>
 </html>
+  
