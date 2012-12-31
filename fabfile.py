@@ -8,9 +8,9 @@ def ycsb(voldemort,workload,recordcount):
   #stime=strftime("%H%M%S")[1:4]
   #Voldemort
   if len(voldemort)>0 :
-    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -threads 16 -target 1000 -p recordcount='+recordcount+' -P workloads/'+ workload
+    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -target 1000 -p recordcount='+recordcount+' -P workloads/'+ workload
     local(cmd)
-    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -threads 16 -target 1000 -p recordcount='+recordcount+' -P workloads/'+ workload + ' > res/voldemort.res'
+    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -target 1000 -p recordcount='+recordcount+' -P workloads/'+ workload + ' > res/voldemort.res'
     local(cmd)
   #MongoDB
   if len(mongo)>0 : 
