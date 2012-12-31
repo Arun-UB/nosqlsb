@@ -23,7 +23,7 @@ def ycsb(voldemort,workload,recordcount):
   # if len(cassandra)>0 : 
   cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load cassandra-10 -s -P workloads/'+ workload + ' -p recordcount='+recordcount+' -p hosts=10.80.77.61 -threads 10 -p recordcount='+recordcount
   local(cmd)
-  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run cassandra-10 -s -P workloads/'+ workload + ' -p recordcount='+recordcount+' -p operationcount=10000 -p hosts=10.80.77.61 -threads 10 -p recordcount='+recordcount+' > res/cassaandra.res'
+  cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run cassandra-10 -s -P workloads/'+ workload + ' -p recordcount='+recordcount+'  -p hosts=10.80.77.61 -threads 10 -p recordcount='+recordcount+' > res/cassaandra.res'
   local(cmd)
 # bin/ycsb run cassandra-10 -P workloads/workloada -p recordcount=10000 -p operationcount=10000 -threads 10 -s > filepath
  # ./bin/ycsb load cassandra-10 -s -P workloads/workloada -p hosts=10.80.77.61 -target 8000 -threads 16 -p recordcount=100000 > testcasa.dat
