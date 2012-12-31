@@ -25,12 +25,12 @@ def ycsb():
 
         sh.fab("ycsb:workload="+request.form['workload']+',recordcount='+request.form['recordcount']+',target='+request.form['target'])
 	flash('Done')
-	return render_template('index.html')
+	return render_template('runtime.html')
 
     else:
         error = 'Invalid username/password'
     
-    return render_template('runtime.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
 	app.debug=True
