@@ -24,7 +24,7 @@ def ycsb():
     	#msg=sh.fab("-H","ubuntu@ec2-174-129-80-204.compute-1.amazonaws.com`","-i","/home/arun/nosqlsb.pem","host_type");
 
         sh.fab("ycsb:workload="+request.form['workload']+',recordcount='+request.form['recordcount']+',voldemort='+request.form['voldemort'])
-	flash('Done'+request.form['voldemort'])
+	flash('Done')
 	return render_template('index.html')
 
     else:
