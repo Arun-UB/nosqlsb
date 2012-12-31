@@ -27,4 +27,6 @@ def ycsb(workload,recordcount,target):
   local(cmd)
 # bin/ycsb run cassandra-10 -P workloads/workloada -p recordcount=10000 -p operationcount=10000 -threads 10 -s > filepath
  # ./bin/ycsb load cassandra-10 -s -P workloads/workloada -p hosts=10.80.77.61 -target 8000 -threads 16 -p recordcount=100000 > testcasa.dat
-  
+  cmd = 'python /home/ubuntu/project/extract_info_ycsb.py'
+  local(cmd)
+  cmd = 'sh /home/ubuntu/project/plot.sh'
