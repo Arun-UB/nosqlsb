@@ -25,7 +25,7 @@ def ycsb():
 
         sh.fab("ycsb:workload="+request.form['workload']+',recordcount='+request.form['recordcount']+',target='+request.form['target'])
 	flash('Done')
-	return render_template('runtime.html')
+	return render_template('result.html')
 
     else:
         error = 'Invalid username/password'
