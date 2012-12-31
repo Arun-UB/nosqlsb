@@ -3,11 +3,12 @@ from time import strftime
 
 
 def ycsb(voldemort,workload,recordcount):
-  stime=strftime("%H%M%S")[1:4];
+  voldemort_ip=10.72.189.226
+  stime=strftime("%H%M%S")[1:4]
   #Voldemort
   if len(voldemort)>0 :
-    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount='+recordcount+' -P workloads/'+ workload
-    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://10.151.3.175:6666 -p recordcount='+recordcount+' -P workloads/'+ workload + ' > res/voldemort.'+stime+'.res'
+    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -p recordcount='+recordcount+' -P workloads/'+ workload
+    cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -p recordcount='+recordcount+' -P workloads/'+ workload + ' > res/voldemort.'+stime+'.res'
     local(cmd)
   #MongoDB
   # if len(mongo)>0 : 
