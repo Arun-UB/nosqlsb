@@ -30,7 +30,7 @@ def ycsb():
     else:
         error = 'Invalid username/password'
     
-    return render_template('index.html')
+    return render_template('runtime.html')
 
 if __name__ == '__main__':
 	app.debug=True
