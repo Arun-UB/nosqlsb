@@ -35,4 +35,4 @@ def ycsb():
 if __name__ == '__main__':
 	app.debug=True
 	app.secret_key="i want this sem to get over"	
-	app.run(port=5000,host='0.0.0.0')
+	app.run(port=80,host='0.0.0.0')
