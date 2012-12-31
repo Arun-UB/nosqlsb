@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>Gnuplot Canvas Graph</title>
+<!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+<script src="/usr/share/gnuplot/gnuplot/4.4/js/canvastext.js"></script>
+<script src="/usr/share/gnuplot/gnuplot/4.4/js/gnuplot_common.js"></script>
+<script type="text/javascript">function gnuplot_init() {};</script>
+<script type="text/javascript">
+var canvas, ctx;
+var grid_lines = true;
+var zoomed = false;
+var active_plot_name = "gnuplot_canvas";
+
+function gnuplot_canvas() {
+canvas = document.getElementById("gnuplot_canvas");
+ctx = canvas.getContext("2d");
+CanvasTextFunctions.enable(ctx);
+ctx.strokeStyle = "rgb(215,215,215)";
+ctx.lineWidth = 1;
+ctx.lineWidth = 1;
+ctx.strokeStyle = "rgb(000,000,000)";
+ctx.beginPath();
+M(700,3680);
+L(800,3680);
+M(5759,3680);
+L(5659,3680);
+ctx.stroke();
+ctx.closePath();
+T(620,3730,10.0,"Right"," 500");
+ctx.beginPath();
+M(700,3093);
+L(800,3093);
+M(5759,3093);
+L(5659,3093);
+ctx.stroke();
+ctx.closePath();
+T(620,3143,10.0,"Right"," 1000");
+ctx.beginPath();
+M(700,2507);
+L(800,2507);
+M(5759,2507);
+L(5659,2507);
+ctx.stroke();
+ctx.closePath();
+T(620,2557,10.0,"Right"," 1500");
+ctx.beginPath();
+M(700,1920);
+L(800,1920);
+M(5759,1920);
+L(5659,1920);
+ctx.stroke();
+ctx.closePath();
+T(620,1970,10.0,"Right"," 2000");
+ctx.beginPath();
+M(700,1334);
+L(800,1334);
+M(5759,1334);
+L(5659,1334);
+ctx.stroke();
+ctx.closePath();
+T(620,1384,10.0,"Right"," 2500");
+ctx.beginPath();
+M(700,747);
+L(800,747);
+M(5759,747);
+L(5659,747);
+ctx.stroke();
+ctx.closePath();
+T(620,797,10.0,"Right"," 3000");
+ctx.beginPath();
+M(700,161);
+L(800,161);
+M(5759,161);
+L(5659,161);
+ctx.stroke();
+ctx.closePath();
+T(620,211,10.0,"Right"," 3500");
+ctx.beginPath();
+M(1965,3680);
+L(1965,3580);
+M(1965,161);
+L(1965,261);
+ctx.stroke();
+ctx.closePath();
+T(1965,3830,10.0,"Center","Cassandra");
+ctx.beginPath();
+M(3230,3680);
+L(3230,3580);
+M(3230,161);
+L(3230,261);
+ctx.stroke();
+ctx.closePath();
+T(3230,3830,10.0,"Center","MongoDB");
+ctx.beginPath();
+M(4494,3680);
+L(4494,3580);
+M(4494,161);
+L(4494,261);
+ctx.stroke();
+ctx.closePath();
+T(4494,3830,10.0,"Center","Voldemort");
+ctx.beginPath();
+M(700,161);
+L(700,3680);
+L(5759,3680);
+L(5759,161);
+L(700,161);
+ctx.closePath();
+ctx.stroke();
+TR(90,1971,270,10.0,"Center","Run Time(s)");
+T(3229,3980,10.0,"Center","DB Packages");
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+ctx.strokeStyle = "rgb(000,000,000)";
+T(5099,373,10.0,"Right","Runtime");
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+ctx.fillStyle = "rgb(000,000,255)";
+R(5179,292,420,62);
+ctx.strokeStyle = "rgb(160,160,160)";
+ctx.beginPath();
+M(5179,354);
+L(5599,354);
+L(5599,292);
+L(5179,292);
+L(5179,354);
+ctx.closePath();
+ctx.stroke();
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+R(1649,3177,633,503);
+ctx.strokeStyle = "rgb(160,160,160)";
+ctx.beginPath();
+M(1649,3680);
+L(1649,3178);
+L(2281,3178);
+L(2281,3680);
+L(1649,3680);
+ctx.closePath();
+ctx.stroke();
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+R(2913,316,634,3364);
+ctx.strokeStyle = "rgb(160,160,160)";
+ctx.beginPath();
+M(2913,3680);
+L(2913,317);
+L(3546,317);
+L(3546,3680);
+L(2913,3680);
+ctx.closePath();
+ctx.stroke();
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+R(4178,480,633,3200);
+ctx.strokeStyle = "rgb(160,160,160)";
+ctx.beginPath();
+M(4178,3680);
+L(4178,481);
+L(4810,481);
+L(4810,3680);
+L(4178,3680);
+ctx.closePath();
+ctx.stroke();
+ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgb(000,000,255)";
+ctx.strokeStyle = "rgb(000,000,000)";
+ctx.beginPath();
+M(700,161);
+L(700,3680);
+L(5759,3680);
+L(5759,161);
+L(700,161);
+ctx.closePath();
+ctx.stroke();
+
+// plot boundaries and axis scaling information for mousing 
+plot_term_xmax = 600;
+plot_term_ymax = 400;
+plot_xmin = 70.0;
+plot_xmax = 575.9;
+plot_ybot = 368.0;
+plot_ytop = 16.1;
+plot_width = 505.9;
+plot_height = 351.9;
+plot_axis_xmin = -1;
+plot_axis_xmax = 3;
+plot_axis_ymin = 500;
+plot_axis_ymax = 3500;
+plot_axis_x2min = "none"
+plot_axis_y2min = "none"
+plot_logaxis_x = 0;
+plot_logaxis_y = 0;
+plot_axis_width = plot_axis_xmax - plot_axis_xmin;
+plot_axis_height = plot_axis_ymax - plot_axis_ymin;
+}
+</script>
+<link type="text/css" href="/usr/share/gnuplot/gnuplot/4.4/js/gnuplot_mouse.css" rel="stylesheet">
+</head>
+<body onload="gnuplot_canvas(); gnuplot_init();" oncontextmenu="return false;">
+
+<div class="gnuplot">
+<table class="plot">
+<tr><td>
+    <canvas id="gnuplot_canvas" width="600" height="400" tabindex="0">
+	Sorry, your browser seems not to support the HTML 5 canvas element
+    </canvas>
+</td></tr>
+</table>
+</div>
+
+</body>
+</html>
