@@ -14,11 +14,11 @@ def ycsb(voldemort,workload,recordcount):
     # local(cmd)
     
   #MongoDB
-  if len(mongo)>0 : 
-    cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -p recordcount='+recordcount+' -p mongodb.database=ycsb -p mongodb.writeConcern=normal'
-    local(cmd) 
-    cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -p recordcount='+recordcount+' -p mongodb.database=ycsb -p mongodb.writeConcern=normal > res/mongo.res'
-    local(cmd)
+  # if len(mongo)>0 : 
+  #   cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -p recordcount='+recordcount+' -p mongodb.database=ycsb -p mongodb.writeConcern=normal'
+  #   local(cmd) 
+  #   cmd= 'cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb run mongodb -s -p workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -p recordcount='+recordcount+' -p mongodb.database=ycsb -p mongodb.writeConcern=normal > res/mongo.res'
+  #   local(cmd)
   #Cassandra
   # if len(cassandra)>0 : 
   #   cmd='cd /home/ubuntu/ycsb-0.1.4/ && bin/ycsb load cassandra-10 -P workloads/'+ workload + ' -p recordcount=10000  -p hosts=10.152.150.205 -threads 10 -s > filepath'+stime+'.res'
