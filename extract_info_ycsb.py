@@ -1,6 +1,5 @@
 import re
 import os
-temp = "mongodb.dat" #for now
 def extract_data(file_loc):
 	if not os.path.exists(file_loc):
 		print "failed to find file"
@@ -22,5 +21,24 @@ def extract_data(file_loc):
 	return [avg_latency, throughput, run_time]
 
 if __name__ == '__main__':
-	print extract_data(temp)
-	print extract_data("voldemort.dat")
+	mongodb =  extract_data('/home/akarsh/mongodb.dat')
+	cassandra =  extract_data("/home/akarsh/cassandra.dat")
+	voldemort = extract_data('/home/akarsh/voldemort.dat')
+	f = open("avg_latency.dat","w")
+	f.write('MongoDB  '+ mongodb[0] +'\n')
+	f.write('Cassandra  ' + cassandra[0] +'\n')
+	f.write('Voldemort  ' + voldemort[0] + '\n')
+	print(mongodb[1],cassandra[1],voldemort[1])
+	print(mongodb[2],cassandra[2],voldemort[2])
+	
+	f = open("throughput.dat","w")
+	f.write('MongoDB  '+ mongodb[1] +'\n')
+	f.write('Cassandra  ' + cassandra[1] +'\n')
+	f.write('Voldemort  ' + voldemort[1] + '\n')
+	print(mongodb[1],cassandra[1],voldemort[1])
+	print(mongodb[2],cassandra[2],voldemort[2])
+	
+	f = open("runtime.dat","w")
+	f.write('MongoDB  '+ mongodb[2] +'\n')
+	f.write('Cassandra  ' + cassandra[2] +'\n')
+	f.write('Voldemort  ' + voldemort[2] + '\n')
