@@ -28,15 +28,11 @@ if __name__ == '__main__':
 	f.write('MongoDB  '+ mongodb[0] +'\n')
 	f.write('Cassandra  ' + cassandra[0] +'\n')
 	f.write('Voldemort  ' + voldemort[0] + '\n')
-	print(mongodb[1],cassandra[1],voldemort[1])
-	print(mongodb[2],cassandra[2],voldemort[2])
 	
 	f = open("throughput.dat","w")
 	f.write('MongoDB  '+ mongodb[1] +'\n')
 	f.write('Cassandra  ' + cassandra[1] +'\n')
 	f.write('Voldemort  ' + voldemort[1] + '\n')
-	print(mongodb[1],cassandra[1],voldemort[1])
-	print(mongodb[2],cassandra[2],voldemort[2])
 	
 	f = open("runtime.dat","w")
 	f.write('MongoDB  '+ mongodb[2] +'\n')
