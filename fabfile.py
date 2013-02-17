@@ -10,14 +10,14 @@ def ycsb(workload,recordcount,target):
   # if len(voldemort)>0 :
   cmd='cd /home/ubuntu/YCSB/ && bin/ycsb load voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666  -target '+target+' -p recordcount='+recordcount+' -P workloads/'+ workload
   local(cmd)
-  cmd='cd /home/ubuntu/YCSB/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -target '+target+' -p recordcount='+recordcount+' -P workloads/'+ workload + ' > res/voldemort.res'
+  cmd='cd /home/ubuntu/YCSB/ && bin/ycsb run voldemort -p bootstrap_urls=tcp://'+voldemort_ip+':6666 -target '+target+' -p recordcount='+recordcount+' -P workloads/'+ workload + ' > voldemort.res'
   local(cmd)
 
   #MongoDB
   # if len(mongo)>0 : 
   cmd= 'cd /home/ubuntu/YCSB/ && bin/ycsb load mongodb -s -P workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -threads 10 -p recordcount='+recordcount+' -p mongodb.database=ycsb -target '+target+' -p mongodb.writeConcern=normal'
   local(cmd) 
-  cmd= 'cd /home/ubuntu/YCSB/ && bin/ycsb run mongodb -s -P workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -threads 10 -p recordcount='+recordcount+' -p mongodb.database=ycsb -target '+target+' -p mongodb.writeConcern=normal > res/mongo.res'
+  cmd= 'cd /home/ubuntu/YCSB/ && bin/ycsb run mongodb -s -P workloads/'+ workload + ' -p mongodb.url=mongodb://'+mongo_ip+':27017 -threads 10 -p recordcount='+recordcount+' -p mongodb.database=ycsb -target '+target+' -p mongodb.writeConcern=normal > mongo.res'
   local(cmd)
   
   #Cassandra
@@ -32,7 +32,7 @@ def ycsb(workload,recordcount,target):
   #DynamoDB
   cmd='cd /home/ubuntu/YCSB/ && bin/ycsb load dynamodb -P workloads/'+ workload + ' -target '+target+' -p recordcount='+recordcount+' -P dynamodb/conf/dynamodb.properties'
   local(cmd)
-  cmd='cd /home/ubuntu/YCSB/ && bin/ycsb run dynamodb -P workloads/'+ workload + ' -target '+target+' -p recordcount='+recordcount+' -P dynamodb/conf/dynamodb.properties >res/dynamodb.res'
+  cmd='cd /home/ubuntu/YCSB/ && bin/ycsb run dynamodb -P workloads/'+ workload + ' -target '+target+' -p recordcount='+recordcount+' -P dynamodb/conf/dynamodb.properties > dynamodb.res'
   local(cmd)
 
 
