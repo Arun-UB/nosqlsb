@@ -9,5 +9,5 @@ set style histogram cluster gap 1
 set xlabel "DB Packages"
 set ylabel "Runtime (msec)"
 set title "Runtime of NoSQL Benchmark Workload"
-plot file using 2:xticlabels(1) title "Throughput" linecolor rgb "#0000FF"
+plot file using 2:xticlabels(1) title "Runtime" linecolor rgb "#0000FF"
 

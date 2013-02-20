@@ -9,5 +9,5 @@ set style histogram cluster gap 1
 set xlabel "DB Packages"
 set ylabel "Avergae Latency (usec)"
 set title "Average Latency"
-plot file using 2:xticlabels(1) title "Throughput" linecolor rgb "#0000FF"
+plot file using 2:xticlabels(1) title "Average Latency" linecolor rgb "#0000FF"
 
