@@ -21,20 +21,24 @@ def extract_data(file_loc):
 	return [avg_latency, throughput, run_time]
 
 if __name__ == '__main__':
-	mongodb =  extract_data('/home/akarsh/mongodb.dat')
-	cassandra =  extract_data("/home/akarsh/cassandra.dat")
-	voldemort = extract_data('/home/akarsh/voldemort.dat')
+	mongodb =  extract_data('/home/ubuntu/YCSB/mongo.res')
+	cassandra =  extract_data("/home/ubuntu/YCSB/cassandra.res")
+	voldemort = extract_data('/home/ubuntu/YCSB/voldemort.res')
+	dynamodb = extract_data('/home/ubuntu/YCSB/dynamodb.res')
 	f = open("avg_latency.dat","w")
 	f.write('MongoDB  '+ mongodb[0] +'\n')
 	f.write('Cassandra  ' + cassandra[0] +'\n')
 	f.write('Voldemort  ' + voldemort[0] + '\n')
+	f.write('DynamoDB  ' + dynamodb[0] + '\n')
 	
 	f = open("throughput.dat","w")
 	f.write('MongoDB  '+ mongodb[1] +'\n')
 	f.write('Cassandra  ' + cassandra[1] +'\n')
 	f.write('Voldemort  ' + voldemort[1] + '\n')
+	f.write('DynamoDB  ' + dynamodb[1] + '\n')
 	
 	f = open("runtime.dat","w")
 	f.write('MongoDB  '+ mongodb[2] +'\n')
 	f.write('Cassandra  ' + cassandra[2] +'\n')
 	f.write('Voldemort  ' + voldemort[2] + '\n')
+	f.write('DynamoDB  ' + dynamodb[2] + '\n')

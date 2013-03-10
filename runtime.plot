@@ -1,5 +1,5 @@
 set terminal png
-set output "/home/akarsh/runtime.png"
+set output "/home/ubuntu/project/static/runtime.png"
 
 set style fill solid 1.00 border 0
 set style histogram

@@ -1,5 +1,5 @@
 set terminal png
-set output "/home/akarsh/avg_latency.png"
+set output "/home/ubuntu/project/static/avg_latency.png"
 
 set style fill solid 1.00 border 0
 set style histogram
